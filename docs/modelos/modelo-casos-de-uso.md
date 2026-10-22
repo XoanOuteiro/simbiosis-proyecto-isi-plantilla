@@ -245,25 +245,50 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21 Buscar Receta
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** La persona quiere localizar una receta que cumpla sus criterios y consultar su detalle.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** Estar registrado, iniciar sesion.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario se dispone a realizar una busqueda.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:** 1. El usuario selecciona al menos un criterio de búsqueda (palabra o frase, ingredientes a incluir y/o ingredientes a excluir).
 
-**Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
 
-**Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+2. El usuario solicita ejecutar la búsqueda.
 
-**Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
 
-**Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+3. El sistema verifica que no existan conflictos entre los criterios.
+
+
+4. El sistema obtiene las recetas publicadas y validadas que cumplen todos los criterios combinados.
+
+
+5. El sistema presenta los resultados ordenados por fecha de publicación (las más recientes primero), mostrando una vista previa de cada receta.
+
+
+6. El usuario selecciona un resultado de la lista.
+
+
+7. El sistema muestra el detalle de la receta seleccionada.
+
+**Extensiones (flujos alternativos):** 
+1. El sistema detecta que no se indicó ningún criterio.
+
+
+2. El sistema solicita al usuario que indique al menos un criterio y conserva la búsqueda sin ejecutar.
+
+
+3. El flujo vuelve al paso 1.
+
+**Postcondiciones:** Exito en busqueda o fallo.
+
+**Reglas y NFR pertinentes:** UR-08; FR-056, FR-066, FR-085, FR-086, FR-087, FR-089, FR-099, FR-102, FR-119 y FR-192. NFR-004, NFR-005 y NFR-010.
+
+**Preguntas abiertas:** No.
 
 ## 7 Continuidad entre iteraciones
 
